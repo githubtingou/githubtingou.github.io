@@ -996,7 +996,10 @@
 
 <h2 id=""><a href="#" class="headerlink" title=""></a></h2><h3 id="源码-1"><a href="#源码-1" class="headerlink" title="源码"></a>源码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> Object[] grow(<span class="type">int</span> minCapacity) &#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">oldCapacity</span> <span class="operator">=</span> elementData.length; <span class="comment">// 获取当前数组的长度</span></span><br><span class="line">    <span class="keyword">if</span> (oldCapacity &gt; <span class="number">0</span> || elementData != DEFAULTCAPACITY_EMPTY_ELEMENTDATA) &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">newCapacity</span> <span class="operator">=</span> ArraysSupport.newLength(oldCapacity,</span><br><span class="line">                minCapacity - oldCapacity, <span class="comment">/* minimum growth */</span></span><br><span class="line">                oldCapacity &gt;&gt; <span class="number">1</span>           <span class="comment">/* preferred growth 根据当前数组的长度扩容1.5倍*/</span>);</span><br><span class="line">        <span class="type">return</span> <span class="variable">elementData</span> <span class="operator">=</span> Arrays.copyOf(elementData, newCapacity);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="type">return</span> <span class="variable">elementData</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Object</span>[Math.max(DEFAULT_CAPACITY, minCapacity)];<span class="comment">// 设置默认大小为10</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h3><p><img src="/arrayList/ArrayList-add(element)%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="ArrayList-add(element)流程图"></p>
+<h3 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h3><img src="/posts/56054/ArrayList-add%E6%B5%81%E7%A8%8B%E5%9B%BE.png" class="" title="ArrayList-add流程图">
+
+
+
 <h3 id="-1"><a href="#-1" class="headerlink" title=""></a></h3>]]></content>
       <categories>
         <category>文章</category>
